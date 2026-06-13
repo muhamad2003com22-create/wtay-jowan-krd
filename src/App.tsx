@@ -187,19 +187,9 @@ export default function App() {
     return matchesCategory && matchesSearch;
   });
 
-  // Check if opened inside TikTok, Instagram, or Facebook in-app browser
-  const isInAppBrowser = /FBAV|FBAN|Instagram|TikTok|Line|Snapchat/i.test(navigator.userAgent || '');
-
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-amber-150 selection:bg-amber-50 selection:text-amber-800">
       
-      {/* In-App Browser Warning Banner */}
-      {isInAppBrowser && !currentUser && (
-        <div className="bg-rose-600 text-white text-xs sm:text-sm text-center p-3 font-bold z-50 w-full shadow-lg" style={{ direction: 'rtl' }}>
-          ⚠️ ئاگاداری: تۆ لەناو (تیکتۆک یان ئینستاگرام) ئەم لینکەت کردۆتەوە! تکایە لە سێ خاڵەکەی سەرەوە کلیک بکە و <span className="underline text-amber-200">Open in Browser (Chrome/Safari)</span> هەڵبژێرە بۆ ئەوەی بتوانیت داخڵ ببیت.
-        </div>
-      )}
-
       {/* Premium Header */}
       <Header 
         user={currentUser}
