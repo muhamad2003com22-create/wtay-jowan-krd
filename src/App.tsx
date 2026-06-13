@@ -8,7 +8,8 @@ import {
 } from './firebase';
 import { 
   onAuthStateChanged, 
-  signInWithPopup, 
+  signInWithRedirect,
+  getRedirectResult,
   signOut 
 } from 'firebase/auth';
 import { 
@@ -142,13 +143,21 @@ export default function App() {
     fetchAllQuotes();
   }, []);
 
+  // Handle redirect result for mobile
+  useEffect(() => {
+    getRedirectResult(auth).catch((error) => {
+      console.error("Google sign-in redirect error:", error);
+      alert("پرۆسەی چوونەژوورەوەی گووگڵ فەشەلی هێنا. تکایە دووبارە تاقی بکەرەوە.");
+    });
+  }, []);
+
   // Google sign in trigger
   const handleGoogleLogin = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      await signInWithRedirect(auth, googleProvider);
     } catch (error) {
       console.error("Google sign-in error:", error);
-      alert("پرۆسەی چوونەژوورەوەی گووگڵ فەشەلی هێنا. تکایە دووبارە تاقی بکەرەوە.");
+      alert("کێشەیەک ڕوویدا لە پەیوەندیکردن بە گووگڵەوە.");
     }
   };
 
