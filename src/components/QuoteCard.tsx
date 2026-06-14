@@ -243,10 +243,10 @@ export default function QuoteCard({
             </div>
           )}
           <div className="flex flex-col">
-            <span className="text-[11px] font-bold text-gray-350">
+            <span className="text-xs font-bold text-gray-200">
               {quote.userDisplayName || 'مێوان'}
             </span>
-            <span className="text-[9px] text-gray-500 font-sans">
+            <span className="text-[10px] text-gray-400 font-sans mt-0.5">
               {formatKurdishDate(quote.createdAt)}
             </span>
           </div>

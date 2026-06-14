@@ -108,7 +108,7 @@ export default function UserProfileForm({ user, onProfileUpdated, onBackToMain }
             <Sparkles className="w-5 h-5 text-amber-500" />
             تایبەتمەندی پڕۆفایلی من
           </h2>
-          <p className="text-xs text-gray-500 font-sans mt-0.5">ئەم زانیارییانە بۆ بڵاوکردنەوەی پەیامەکانت لەگەڵ خەڵکی پۆست دەکرێن.</p>
+          <p className="text-xs text-gray-400 font-sans mt-0.5">ئەم زانیارییانە بۆ بڵاوکردنەوەی پەیامەکانت لەگەڵ خەڵکی پۆست دەکرێن.</p>
         </div>
         <button
           onClick={onBackToMain}
@@ -134,12 +134,12 @@ export default function UserProfileForm({ user, onProfileUpdated, onBackToMain }
           />
           
           {/* Stats Station */}
-          <div className="w-full bg-[#0f0f0f] border border-white/5 rounded-2xl p-4 space-y-3.5 text-center mt-2">
+          <div className="w-full bg-[#0f0f0f] border border-white/10 rounded-2xl p-4 space-y-3.5 text-center mt-2">
             <div>
-              <span className="text-[10px] text-gray-500 block font-sans">کۆی وتەکانت</span>
+              <span className="text-xs text-gray-400 block font-sans">کۆی وتەکانت</span>
               <span className="text-2xl font-bold text-amber-500 font-sans">{userQuotesCount}</span>
             </div>
-            <div className="border-t border-white/5 pt-2 text-[10px] text-gray-500 font-sans leading-relaxed">
+            <div className="border-t border-white/10 pt-2 text-xs text-gray-400 font-sans leading-relaxed">
               تۆمار بوو لە ڕۆژی:<br />
               <span className="font-semibold text-gray-300">
                 {new Date(user.joinedAt).toLocaleDateString('ku-IQ', {
@@ -171,14 +171,14 @@ export default function UserProfileForm({ user, onProfileUpdated, onBackToMain }
 
           {/* Readonly: Google Email Address */}
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold text-gray-500 font-sans">
+            <label className="block text-xs font-bold text-gray-300 font-sans">
               ناونیشانی ئیمەیڵ (گووگڵ جیماڵ)
             </label>
             <input
               type="email"
               value={user.email}
               disabled
-              className="w-full px-4 py-2.5 bg-[#0f0f0f] border border-white/5 text-gray-500 rounded-xl font-sans text-xs cursor-not-allowed"
+              className="w-full px-4 py-2.5 bg-[#0f0f0f] border border-white/10 text-gray-400 rounded-xl font-sans text-xs cursor-not-allowed"
               id="profile-email-readonly"
             />
           </div>

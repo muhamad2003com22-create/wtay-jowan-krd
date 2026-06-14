@@ -137,7 +137,7 @@ export default function ImageUpload({ currentPhotoURL, onImageSelected, onImageR
         className={`relative group w-28 h-28 rounded-full border-2 border-dashed flex items-center justify-center cursor-pointer overflow-hidden transition-all duration-300 ${
           dragOver 
             ? 'border-amber-500 bg-amber-500/10' 
-            : 'border-slate-300 hover:border-amber-400 bg-slate-50 hover:bg-slate-100 dark:hover:bg-slate-800'
+            : 'border-white/20 hover:border-amber-400 bg-white/5 hover:bg-white/10'
         }`}
         id="avatar-upload-zone"
       >
@@ -154,9 +154,9 @@ export default function ImageUpload({ currentPhotoURL, onImageSelected, onImageR
             </div>
           </>
         ) : (
-          <div className="flex flex-col items-center gap-1 text-slate-400 text-center px-2">
-            <Upload className="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors" />
-            <span className="text-[10px] font-medium font-sans">وێنە دابنێ</span>
+          <div className="flex flex-col items-center gap-1 text-gray-300 text-center px-2">
+            <Upload className="w-5 h-5 text-gray-400 group-hover:text-amber-500 transition-colors" />
+            <span className="text-[10px] font-bold font-sans">وێنە دابنێ</span>
           </div>
         )}
       </div>
@@ -165,7 +165,7 @@ export default function ImageUpload({ currentPhotoURL, onImageSelected, onImageR
         <button
           type="button"
           onClick={selectFile}
-          className="px-3 py-1 text-xs border border-slate-300 rounded-md hover:border-amber-500 hover:text-amber-600 font-sans cursor-pointer transition-colors"
+          className="px-3 py-1 text-xs border border-white/20 text-gray-200 rounded-md hover:border-amber-500 hover:text-amber-500 font-sans cursor-pointer transition-colors"
           id="btn-select-photo"
         >
           گۆڕینی وێنە
@@ -174,7 +174,7 @@ export default function ImageUpload({ currentPhotoURL, onImageSelected, onImageR
           <button
             type="button"
             onClick={removeImage}
-            className="p-1 text-rose-500 border border-transparent hover:border-rose-200 hover:bg-rose-50 rounded-md cursor-pointer transition-colors"
+            className="p-1 text-rose-500 border border-transparent hover:border-rose-500/30 hover:bg-rose-500/10 rounded-md cursor-pointer transition-colors"
             title="سڕینەوەی وێنە"
             id="btn-remove-photo"
           >
